@@ -1,0 +1,96 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sniffer-M3U8</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif;
+      padding: 0px;
+      width: 390px;
+      background: linear-gradient(165deg, #353535, #202124);
+      box-sizing: border-box;
+    }
+    h3 { 
+      margin-top: 0; 
+      margin-bottom: 0;
+      font-size: 13px;
+      color: #f1f1f1;
+      display: inline-block;
+    }
+    #clearBtn {
+      float: right;
+      font-size: 11px;
+      padding: 3px 6px;
+      border: none;
+      background: #d12b2b;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #clearBtn:hover {
+      background: #a32020;
+    }
+    #links > li {
+      border-left: 4px solid #121212;
+      border-radius: 8px 0px 0px 8px;
+      box-shadow: 3px 6px 15px #121212bd;
+      padding: 7px;
+      background: linear-gradient(165deg, #353535, #202124);
+      color: #f1f1f1;
+    }
+    ul { 
+      list-style: none; 
+      padding-left: 0; 
+    }
+    li { 
+      margin-bottom: 6px; 
+    }
+    .title { 
+      margin-top: 0px;
+      margin-bottom: 7px;
+      font-size: 14px;
+      color: #f1f1f1;
+      font-family: monospace;
+    }
+    .url-box{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .url-item { 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 0px 0px 4px;
+      background: #255ad1;
+      border: 1px solid #255ad1;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+    .url-text { 
+      font-size: 13px; 
+      color: #f1f1f1;
+    }
+    button { 
+      font-size: 12px; 
+      padding: 2px 2px; 
+      border: none;
+      background: #2a2b2c;
+      color: #f1f1f1;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+    button:hover { background: #000; }
+  </style>
+</head>
+<body>
+  <h3>Vídeos detectados:</h3>
+  <button id="exportBtn">Exportar JSON</button>
+  <button id="clearBtn">Limpar</button>
+  <ul id="links"></ul>
+  <script src="popup.js"></script>
+</body>
+</html>
