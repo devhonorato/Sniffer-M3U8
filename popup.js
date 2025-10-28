@@ -13,9 +13,17 @@ function copyURL(url, button) {
 
 // Extrai a resolução de uma URL M3U8
 function getResolution(url) {
-  const match = url.match(/\/(\d{3,4}p)\//i);
-  if (match) return match[1];
+  // Tenta capturar padrões como /720p/ ou /1080p/
+  const matchP = url.match(/\/(\d{3,4}p)\//i);
+  if (matchP) return matchP[1];
+
+  // Tenta capturar padrões como /1920x1080/ ou /1280x720/
+  const matchXY = url.match(/\/(\d{3,4}x\d{3,4})\//i);
+  if (matchXY) return matchXY[1];
+
+  // Reconhece URLs que são playlists gerais
   if (/playlist\.m3u8$/i.test(url)) return "Playlist";
+
   return "Desconhecida";
 }
 
